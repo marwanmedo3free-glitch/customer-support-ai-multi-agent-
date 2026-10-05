@@ -1,0 +1,18 @@
+langgraph>=0.4
+langchain>=0.3
+langchain-groq
+langchain-google-genai>=4.0.0
+
+# Hugging Face embeddings
+langchain-huggingface>=1.0.0
+sentence-transformers>=3.0.0
+langchain-chroma
+langchain-text-splitters
+langchain-mcp-adapters
+mcp[cli]
+psycopg[binary]>=3.1
+fastapi
+uvicorn
+pydantic>=2
+python-dotenv
+# production: langgraph-checkpoint-postgres

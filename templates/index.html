@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Customer Support AI</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main class="shell">
+    <nav class="tabs">
+      <button class="tab active" data-view="chat" type="button">Customer chat</button>
+      <button class="tab" data-view="agent" type="button">Agent console</button>
+    </nav>
+
+    <!-- ===== Customer chat ===== -->
+    <section id="view-chat" class="view">
+      <header class="bar">
+        <div>
+          <h1>Support Assistant</h1>
+          <p class="sub" id="status">Online</p>
+        </div>
+        <div class="controls">
+          <label>Signed in as
+            <select id="customer">
+              <option value="1">Alice (id 1)</option>
+              <option value="2">Bob (id 2)</option>
+            </select>
+          </label>
+          <button id="new" class="ghost" type="button">New chat</button>
+        </div>
+      </header>
+      <section id="log" class="log" aria-live="polite"></section>
+      <div class="chips" id="chips">
+        <button type="button">Where is order 1001?</button>
+        <button type="button">I want a refund for order 1002</button>
+        <button type="button">I want a refund for order 1003</button>
+        <button type="button">What's your return policy?</button>
+        <button type="button">I want to talk to a human</button>
+      </div>
+      <form id="form" class="composer">
+        <input id="input" placeholder="Type your message…" autocomplete="off" maxlength="2000" required>
+        <button id="send" type="submit">Send</button>
+      </form>
+    </section>
+
+    <!-- ===== Agent console ===== -->
+    <section id="view-agent" class="view" hidden>
+      <header class="bar">
+        <div>
+          <h1>Agent Console</h1>
+          <p class="sub" id="count">Enter your agent token to load reviews</p>
+        </div>
+        <div class="controls">
+          <input id="token" type="password" placeholder="Agent token" autocomplete="off">
+          <button id="save" type="button">Connect</button>
+        </div>
+      </header>
+      <p id="error" class="error" hidden></p>
+      <section id="list" class="cards"></section>
+    </section>
+  </main>
+  <script src="/static/script.js"></script>
+</body>
+</html>

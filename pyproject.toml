@@ -1,0 +1,17 @@
+[project]
+name = "support-ai-multi-agent"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "marwan ahmed", email = "marwanmedo3free@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = []
+
+[project.scripts]
+support-ai-multi-agent = "support_ai_multi_agent:main"
+
+[build-system]
+requires = ["uv_build>=0.12.1,<0.13.0"]
+build-backend = "uv_build"
